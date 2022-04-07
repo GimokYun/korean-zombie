@@ -35,14 +35,15 @@
 }
 
 .match {
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   padding: 2vw 0;
 }
 
-.match div {
-  width: 50%;
+.thumbnail,
+.match__title {
+  width: 50vw;
   display: flex;
   justify-content: center;
 }
