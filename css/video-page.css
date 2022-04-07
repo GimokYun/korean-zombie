@@ -78,6 +78,7 @@
   color: rgba(0, 0, 0, 0.5);
   margin-top: 0.5vw;
   font-size: 1.125vw;
+  font-weight: 600;
 }
 
 .match__title div {
