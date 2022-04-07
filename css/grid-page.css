@@ -1,0 +1,73 @@
+.grid-page {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max-content, 54vh));
+  grid-template-rows: 35vh;
+  grid-auto-rows: 35vh;
+  gap: 2vh;
+  place-items: center center;
+  justify-content: center;
+  padding: 2vh 0;
+}
+
+.grid-page div {
+  border-top: 2px solid rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.grid-page div:hover {
+  transform: scale(1.3);
+}
+
+.grid-page h1 {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.4vh;
+  margin: 1vh 0;
+  padding: 0 1vh;
+}
+
+.grid-page span {
+  font-size: 0.7vh;
+}
+
+.grid-page img {
+  height: 30vh;
+  box-shadow: var(--shadow);
+}
+
+.garcia img {
+  width: 41.25vh;
+}
+
+.hominick img {
+  width: 30vh;
+}
+
+.poirier img,
+.yair img,
+.moicano img,
+.edgar img,
+.ige img {
+  width: 45vh;
+}
+
+.aldo img {
+  width: 48vh;
+}
+
+.bermudez img {
+  width: 43.5vh;
+}
+
+.ortega img {
+  width: 53.4vh;
+}
+
+.volkanovski img {
+  width: 36vh;
+}

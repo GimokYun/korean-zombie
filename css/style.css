@@ -1,0 +1,337 @@
+@import "reset.css";
+@import "variable.css";
+@import "video-page.css";
+@import "grid-page.css";
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body,
+.start-page {
+  width: 100%;
+  height: 100vh;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes right-appear-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes left-appear-animation {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes right-disappear-animation {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100vw);
+    visibility: hidden;
+  }
+}
+
+@keyframes left-disappear-animation {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100vw);
+    visibility: hidden;
+  }
+}
+
+.hidden {
+  animation: disappear 1s ease-in-out forwards;
+}
+
+.hidden-page {
+  visibility: hidden;
+}
+
+.appear {
+  opacity: 0;
+  animation: appear 1s ease-in-out forwards;
+}
+
+.right-appear {
+  opacity: 0;
+  transform: translateX(-100vw);
+  animation: right-appear-animation 1s ease-in-out forwards;
+}
+
+.left-appear {
+  opacity: 0;
+  transform: translateX(100vw);
+  animation: left-appear-animation 1s ease-in-out forwards;
+}
+
+.right-disappear {
+  opacity: 1;
+  animation: right-disappear-animation 1s ease-in-out forwards;
+}
+
+.left-disappear {
+  opacity: 1;
+  animation: left-disappear-animation 1s ease-in-out forwards;
+}
+
+.new-font {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 20vh;
+}
+
+.new-start {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  background-color: white;
+}
+
+.start-page {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: white;
+}
+
+.start-page img {
+  width: 50vh;
+  height: 50vh;
+}
+
+.click {
+  margin-top: 3vh;
+  opacity: 0;
+  animation: appear 2s ease-in-out forwards;
+  animation-delay: 1s;
+  display: flex;
+  align-items: center;
+  position: relative;
+  will-change: opacity;
+  will-change: visibility;
+}
+
+.click span {
+  font-size: 2vh;
+}
+
+@keyframes wave {
+  0% {
+    transform: none;
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 0.5;
+  }
+}
+
+.circle {
+  width: 1.5vh;
+  height: 1.5vh;
+  margin-right: 1vh;
+  opacity: 0.5;
+  animation: wave 2s linear infinite;
+  animation-delay: 1s;
+  will-change: transform;
+  will-change: opacity;
+  border-radius: 50%;
+  background: none;
+  border: 1px solid black;
+}
+
+@keyframes elevate {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(1vh);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.click i {
+  position: absolute;
+  left: 1vh;
+  top: 1vh;
+  animation: elevate 2s linear infinite;
+  animation-delay: 1s;
+  will-change: transform;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+main div:first-child,
+main div:last-child {
+  width: 50%;
+  height: 100vh;
+  background-size: cover;
+  filter: brightness(0.5);
+}
+
+main div:first-child {
+  background-image: url("../img/main-img.png");
+}
+
+main div:last-child {
+  background-image: url("../img/main-image-second.png");
+}
+
+.main__title {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.main__title div {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  padding: 0 1vw;
+}
+
+.main__title h1 {
+  font-size: 10vw;
+  font-weight: 600;
+}
+
+.left-chevron,
+.right-chevron {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 1vw;
+  opacity: 0;
+  animation: appear 1s ease-in-out forwards;
+  z-index: 1;
+}
+
+.left-chevron {
+  left: 0;
+  justify-content: flex-start;
+}
+
+.right-chevron {
+  right: 0;
+  justify-content: flex-end;
+}
+
+.left-chevron i,
+.right-chevron i {
+  font-size: 5vw;
+  cursor: pointer;
+}
+
+.chevron--white {
+  color: white;
+  transition: color 0.3s ease-in-out;
+  will-change: color;
+}
+
+.chevron--white:hover {
+  color: gray;
+}
+
+.chevron--black {
+  color: rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease-in-out;
+  will-change: color;
+}
+
+.chevron--black:hover {
+  color: black;
+}
+
+.main__title div:first-child {
+  color: var(--blue);
+  justify-content: flex-end;
+}
+
+.main__title div:last-child {
+  color: var(--red);
+  justify-content: flex-start;
+}
+
+@media screen and (orientation: portrait) {
+  .new-font {
+    font-size: 20vw;
+  }
+  main {
+    flex-direction: column;
+  }
+  main div:first-child,
+  main div:last-child {
+    width: 100%;
+    height: 50vh;
+  }
+}
