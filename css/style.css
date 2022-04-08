@@ -124,6 +124,19 @@ body,
   animation: left-disappear-animation 1s ease-in-out forwards;
 }
 
+.start-page,
+.new-start,
+main,
+.main__title,
+.video-page,
+.grid-page,
+.left-chevron,
+.right-chevron {
+  will-change: opacity;
+  will-change: transfrom;
+  will-change: visibility;
+}
+
 .new-font {
   font-family: "Shadows Into Light", cursive;
   font-size: 20vh;
