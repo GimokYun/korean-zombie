@@ -11,6 +11,8 @@
 html,
 body {
   overflow-x: hidden;
+  width:100%;
+  height:100%;
 }
 
 body {
@@ -18,10 +20,9 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-body,
 .start-page {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 @keyframes appear {
@@ -150,7 +151,7 @@ main,
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 2;
   background-color: white;
 }
@@ -239,7 +240,7 @@ main,
 
 main {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
 }
 
@@ -266,7 +267,7 @@ main div:last-child {
   align-items: center;
   background: none;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .main__title div {
@@ -285,7 +286,7 @@ main div:last-child {
 .right-chevron {
   position: fixed;
   top: 0;
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   padding: 0 1vw;
